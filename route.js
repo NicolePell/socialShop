@@ -19,5 +19,5 @@ Router.route('/signup', {
 });
 
 Router.route('/create', {
-    template: 'pollForm'
+    template: 'sendForm'
 });
