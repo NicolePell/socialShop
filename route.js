@@ -18,6 +18,6 @@ Router.route('/signup', {
     template: 'signup'
 });
 
-Router.route('/makepoll', {
+Router.route('/create', {
     template: 'pollForm'
 });
