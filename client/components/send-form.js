@@ -20,15 +20,21 @@ Template.sendForm.events({
 
 Template.sendForm.events({
 
-  "change input[type='file']": function(event) {
+  "change .imageUpload": function(event, template) {
 
-    event.preventDefault();
+    FS.Utility.eachFile(event, function(file) {
+      Images.insert(file, function(err, fileObject) {
+        if (err) {
+          //handle error
+        } else {
+          // handle success
+          var imagesURL = {
+            "profile.image": "/cfs/files/images/" + fileObject._id
+          };
+        }
+      })
+    })
 
-    var files = event.target.files;
-    var file = files[0];
-    console.log(file);
-
-    // Photos.insert({url: file.toDataURL(), created: Date.now()});
   }
 
 });
