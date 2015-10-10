@@ -1,14 +1,31 @@
 <head>
-  <title>social-shop</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Social Shop</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          Social Shop
+        </a>
+      </div>
+    </div>
+  </nav>
+  <h1>Buy the right thing, let your friend's make the decision</h1>
 
-  {{> hello}}
+  <button>Sign Up</button>
+  <button>Sign In</button>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
