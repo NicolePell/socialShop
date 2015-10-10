@@ -2,6 +2,7 @@
 
   <div class="poll well well-lg" data-id="{{ _id }}">
       <h3>What do you think?</h3>
+      <img class="image" src="/cfs/files/images/{{ image }}" />
 
       {{ #each indexedArray choices }}
           <a href="#" class="vote btn btn-primary btn-block" data-id="{{ _index }}">
@@ -12,4 +13,14 @@
 
   </div>
 
+</template>
+
+<template name="imageView">
+  <div class="imageView">
+    {{#each images}}
+      <div>
+        <a href="{{this.url}}" target="_blank"><img src="{{this.url store='thumbs' uploading='/images/uploading.gif' storing='/images/storing.gif'}}" alt="" class="thumbnail" /></a>
+      </div>
+    {{/each}}
+  </div>
 </template>
