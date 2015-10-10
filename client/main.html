@@ -3,13 +3,18 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             Social Shop
           </a>
+          {{#if currentUser}}
+            <p>Hello {{username}} </p>
+            <p><a href="#" class="logout">Logout</a></p>
+          {{/if}}
         </div>
       </div>
     </nav>
 
     {{> yield}}
+
   </body>
 </template>

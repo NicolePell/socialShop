@@ -4,6 +4,7 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
+
 meteor-platform
 autopublish
 insecure
@@ -11,3 +12,5 @@ twbs:bootstrap
 iron:router
 cfs:standard-packages
 cfs:gridfs
+accounts-password
+jquery

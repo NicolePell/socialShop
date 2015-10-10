@@ -18,6 +18,10 @@ Router.route('/signup', {
     template: 'signup'
 });
 
+Router.route('/signin', {
+    template: 'signin'
+});
+
 Router.route('/create', {
     template: 'sendForm'
 });
