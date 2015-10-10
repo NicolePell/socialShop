@@ -6,6 +6,10 @@
           <a class="navbar-brand" href="/">
             Social Shop
           </a>
+          {{#if currentUser}}
+            <p>Hello {{username}} </p>
+            <p><a href="#" class="logout">Logout</a></p>
+          {{/if}}
         </div>
       </div>
     </nav>

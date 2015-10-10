@@ -10,8 +10,8 @@ Template.pollForm.events({
         {  text: "Fugly.", votes: 0 },
         {  text: "MEH.", votes: 0 }
       ]
-    };    
-     
+    };
+
     // create the new poll
     Polls.insert(newPoll);
   }
