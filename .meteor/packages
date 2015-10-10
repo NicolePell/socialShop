@@ -8,4 +8,4 @@ meteor-platform
 autopublish
 insecure
 twbs:bootstrap
-mdg:camera
+iron:router

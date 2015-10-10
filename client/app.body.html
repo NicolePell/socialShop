@@ -1,41 +1,15 @@
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          Social Shop
-        </a>
+<template name="main">
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            Social Shop
+          </a>
+        </div>
       </div>
-    </div>
-  </nav>
-  <h1>Buy the right thing, let your friend's make the decision</h1>
+    </nav>
 
-  <button>Sign Up</button>
-  <button>Sign In</button>
-
-  <!-- PULL IN THE POLL CREATION FORM -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        {{ >pollForm }}
-      </div>
-    </div>
-  </div>
-
-  <!-- PULL IN THE CAMERA FORM -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        {{ >takePhoto }}
-      </div>
-    </div>
-  </div>
-
-  <!-- LOOP OVER POLLS AND SHOW EACH -->
-  <div class="polls">
-      {{ #each polls }}
-          {{ >poll }}
-      {{ /each }}
-  </div>
-
-</body>
+    {{> yield}}
+  </body>
+</template>
