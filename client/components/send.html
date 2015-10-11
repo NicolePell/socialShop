@@ -2,7 +2,7 @@
 
   <div class="poll well well-lg" data-id="{{ _id }}">
       <h3>What do you think?</h3>
-      <img class="image" src="/cfs/files/images/{{ image }}" />
+      <img class="image" src="{{ image }}" />
 
       {{ #each indexedArray choices }}
           <a href="#" class="vote btn btn-primary btn-block" data-id="{{ _index }}">
