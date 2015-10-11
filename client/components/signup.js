@@ -8,9 +8,6 @@ Template.signup.events({
     var telephone = $('[name=telephone]').val();
     var password = $('[name=password]').val();
 
-    Session.set('username', username);
-
-    console.log(Session.get('username'));
     Accounts.createUser({
       username: username,
       email: email,
@@ -22,10 +19,3 @@ Template.signup.events({
     Router.go('/create');
   }
 });
-
-// Template.signup.helpers({
-//
-//   username: function () {
-//     return Session.get('username');
-//   }
-// });

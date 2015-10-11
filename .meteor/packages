@@ -7,10 +7,10 @@
 
 meteor-platform
 autopublish
-insecure
 twbs:bootstrap
 iron:router
 cfs:standard-packages
 cfs:gridfs
 accounts-password
 jquery
+fourseven:scss

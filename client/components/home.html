@@ -1,11 +1,6 @@
 <template name="home">
-
-  Welcome home.
-
-  <ul>
-    <li><a href="{{pathFor route='signup'}}">Register</a></li>
-    <li><a href="{{pathFor route='signin'}}">Login</a></li>
-</ul>
-
-
+  <div class="homeBtn">
+    <a class="btn btn-warning btn-block btn-lg" href="{{pathFor route='signup'}}">Register</a>
+    <a class="btn btn-warning btn-block btn-lg" href="{{pathFor route='signin'}}">Login</a>
+  </div>
 </template>

@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700);
+
+@mixin commonFriend() {
+    padding: 2px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 1px black;
+    color: white;
+    li {
+        list-style: none;
+    };
+}
+html {
+    background: url("/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+body {
+    background: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+}
+
+.friend {
+    margin: 9px;
+    @include commonFriend();
+    &:nth-child(odd) {
+        background-color: RGBA(243, 86, 93, 1);
+    };
+    &:nth-child(even) {
+        background-color: RGBA(119, 197, 208, 1);
+    };
+    span{
+      margin-right: 35px;
+    }
+}
+.styleForm {
+    @include commonFriend();
+    background-color: RGBA(164, 138, 212, 1);
+    h2 {
+        text-shadow: 1px 1px 1px black;
+    }
+    a{
+      color: white;
+    }
+}
+.currentUser {
+    position: absolute;
+    right: 100px;
+    top: 8px;
+    font-size: 24px;
+}
+
+.addFriend{
+  padding: 10px;
+}
+
+.homeBtn{
+  a{
+    margin-top: 30px !important;
+  }
+}
+
+.faPos{
+  float: left;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  font-size: 30px !important;
+}
+
+.sendForm{
+  h2{
+    color: white;
+  }
+}
+
+.controlsSend{
+  margin-top: 50px;
+background: white;
+padding: 10px;
+border-radius: 5px;
+  li{
+    list-style: none;
+    margin: 10px 0;
+    display: block;
+  }
+}
