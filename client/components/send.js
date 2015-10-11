@@ -11,19 +11,7 @@ Template.poll.events({
     var pollID = $(event.currentTarget).parent('.poll').data('id');
     var voteID = $(event.currentTarget).data('id');
 
-    // create the incrementing object so we can add to the corresponding vote
-    var voteString = 'choices.' + voteID + '.votes';
-    var action = {};
-    action[voteString] = 1;
-
-    // increment the number of votes for this choice
-    Polls.update(
-      { _id: pollID },
-      { $inc: action }
-    );
-
-    console.log(pollID);
-    console.log(Polls.findOne({ _id: pollID }));
+    Meteor.call('incrementVotes', pollID, voteID);
 
     image: {
       return Polls.findOne({ _id: pollID }).image;
