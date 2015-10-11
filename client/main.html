@@ -9,13 +9,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{pathFor route='home'}}">
             Social Shop
           </a>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             {{#if currentUser}}
             <ul class="nav navbar-nav">
               <li><a href="#" class="logout"><i class="fa fa-hand-lizard-o"></i> Logout</a></li>
+              <li><a class="addFriend" href="{{pathFor route='create'}}"><i class="fa fa-thumbs-o-up"></i> Get opinions</a></li>
               <li><a class="addFriend" href="{{pathFor route='addFriend'}}"><i class="fa fa-hand-spock-o"></i> Add friend</a></li>
             </ul>
             <ul class="nav navbar-right currentUser">

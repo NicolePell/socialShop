@@ -16,6 +16,6 @@ Template.signup.events({
     });
     console.log('user saved');
 
-    Router.go('/create');
+    Router.go('/addFriend');
   }
 });
