@@ -1,44 +1,27 @@
 Template.sendForm.events({
 
-  "change .imageUpload": function(event, template) {
-
-    FS.Utility.eachFile(event, function(file) {
-      Images.insert(file, function(err, fileObject) {
-        if (err) {
-          //handle error
-        } else {
-          // handle success
-          var imagesURL = {
-            "profile.image": "/cfs/files/images/" + fileObject._id
-          };
-
-          var newPoll = {
-            image: fileObject._id,
-            choices: [
-              {  text: "Hells yeah.", votes: 0 },
-              {  text: "Fugly.", votes: 0 },
-              {  text: "MEH.", votes: 0 }
-            ]
-          };
-
-          // create the new poll
-          Polls.insert(newPoll);
-
-        }
+  'click .takePhoto': function(event, template) {
+      event.preventDefault();
+      var cameraOptions = {
+          width: 800,
+          height: 600
+      };
+      MeteorCamera.getPicture(cameraOptions, function (error, data) {
+         if (!error) {
+             template.$('.photo').attr('src', data);
+             Session.set('photo', data);
+             Meteor.call('newPoll', data, Meteor.userId());
+         }
       });
-    });
-
   },
 
   'click .sendToUser': function(event){
     event.preventDefault();
     $('input:checkbox[name=friend]:checked').each(function() {
         console.log('Checkbox: ' + $(this).val());
+        Router.go("/poll/");
     });
   }
-
-
-
 });
 
 Template.sendForm.helpers({

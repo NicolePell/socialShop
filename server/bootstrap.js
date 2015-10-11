@@ -28,5 +28,26 @@ Meteor.methods({
   createFriend: function (friend) {
     console.log('friend created');
     Friends.insert(friend);
+  },
+
+  // base64Image: function (photo) {
+  //   Images.insert( { dataURI: photo} );
+  // },
+
+  newPoll: function (photo, user) {
+    var newPoll = {
+      image: photo,
+      userId: user,
+      choices: [
+        {  text: "Hells yeah.", votes: 0 },
+        {  text: "Fugly.", votes: 0 },
+        {  text: "MEH.", votes: 0 }
+      ]
+    };
+
+    // create the new poll
+    Polls.insert(newPoll);
+    console.log(newPoll);
+    console.log(user);
   }
 });

@@ -14,3 +14,5 @@ cfs:gridfs
 accounts-password
 jquery
 fourseven:scss
+cfs:ejson-file
+mdg:camera

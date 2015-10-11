@@ -1,7 +1,10 @@
 {
-  "TWILIO": {
-    "FROM": process.env.PHONENUMBER
-    "SID": process.env.TWILIOSID
-    "TOKEN": process.env.AUTHTOKEN
+  "awsBucket": "meteorsocialshop",
+  "awsAccessKeyId": "AKIAJLRDNGZRK7HRLFPQ",
+  "awsSecretKey": "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",
+  "public": {
+    "awsBucketUrl": "https://meteorsocialshop.s3.amazonaws.com",
+    "environment": "staging"
   }
+
 }
