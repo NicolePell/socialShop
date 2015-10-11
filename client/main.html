@@ -3,14 +3,26 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
             Social Shop
           </a>
-          {{#if currentUser}}
-            <p>Hello {{currentUser.username}} </p>
-            <p><a href="#" class="logout">Logout</a></p>
-            <p><a class="addFriend" href="{{pathFor route='addFriend'}}">Add friend</a></p>
-          {{/if}}
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            {{#if currentUser}}
+            <ul class="nav navbar-nav">
+              <li><a href="#" class="logout"><i class="fa fa-hand-lizard-o"></i> Logout</a></li>
+              <li><a class="addFriend" href="{{pathFor route='addFriend'}}"><i class="fa fa-hand-spock-o"></i> Add friend</a></li>
+            </ul>
+            <ul class="nav navbar-right currentUser">
+              <li>Hello {{currentUser.username}} </li>
+            </ul>
+            {{/if}}
+          </div>
         </div>
       </div>
     </nav>

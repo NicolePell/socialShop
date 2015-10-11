@@ -10,4 +10,7 @@
 .image {
   width: 40rem;
   height: 40rem;
+  margin: 20px auto;
+  display: block;
+  border: 5px solid RGBA(51, 51, 51, 0.8);
 }

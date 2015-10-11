@@ -13,3 +13,4 @@ cfs:standard-packages
 cfs:gridfs
 accounts-password
 jquery
+fourseven:scss
