@@ -9,5 +9,7 @@ meteor-platform
 autopublish
 twbs:bootstrap
 iron:router
+cfs:standard-packages
+cfs:gridfs
 accounts-password
 jquery

@@ -6,3 +6,8 @@
 .question-group label   {
   font-size:18px;
 }
+
+.image {
+  width: 40rem;
+  height: 40rem;
+}

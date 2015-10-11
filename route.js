@@ -27,5 +27,5 @@ Router.route('/addFriend', {
 });
 
 Router.route('/create', {
-    template: 'pollForm'
+    template: 'sendForm'
 });
