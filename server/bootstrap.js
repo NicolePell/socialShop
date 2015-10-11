@@ -24,3 +24,10 @@ Meteor.startup(function() {
   }
 
 });
+
+Meteor.methods({
+  createFriend: function (friend) {
+    console.log('friend created');
+    Friends.insert(friend);
+  }
+});

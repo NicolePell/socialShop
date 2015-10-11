@@ -1,9 +1,12 @@
 <template name="sendForm">
+  <form class="row col-xs-12">
+    {{#each showFriends}}
+      {{> friendTempPoll}}
+    {{/each}}
 
-  <input type="file" accept="image/*" id="capture" capture="camera" class="imageUpload">
-
-  <form>
-    <button type="submit" class="btn btn-lg btn-primary btn-block">Send</button>
+    <div class="row col-xs-12 controlsSend">
+      <input type="file" accept="image/*" id="capture" capture="camera" class="imageUpload col-xs-6">
+      <button type="submit" class="sendToUser btn btn-primary col-xs-6">Send</button>
+    </div>
   </form>
-
 </template>

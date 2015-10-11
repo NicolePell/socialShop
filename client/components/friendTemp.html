@@ -1,6 +1,15 @@
 <template name="friendTemp">
-  <ul class="row col-xs-6 col-sm-4 col-md-3">
+  <ul class="row col-xs-6 col-sm-4 col-md-3 col-lg-3">
     <li>{{friend}}</li>
-    <l>{{telephone}}</l>
+    <li>{{telephone}}</li>
   </ul>
+</template>
+
+<template name="friendTempPoll">
+  <div class="friend row col-xs-6 col-sm-4 col-md-3 col-lg-3">
+    <label for="friend">
+      <span>{{friend}}</span>
+      <input type="checkbox" name="friend" value="{{telephone}}">
+    </label>
+  </div>
 </template>
