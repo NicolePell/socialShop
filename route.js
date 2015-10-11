@@ -22,6 +22,10 @@ Router.route('/signin', {
     template: 'signin'
 });
 
+Router.route('/addFriend', {
+    template: 'addFriend'
+});
+
 Router.route('/create', {
     template: 'sendForm'
 });

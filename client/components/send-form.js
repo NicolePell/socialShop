@@ -25,9 +25,24 @@ Template.sendForm.events({
           Polls.insert(newPoll);
 
         }
-      })
-    })
+      });
+    });
 
+  },
+
+  'click .sendToUser': function(event){
+    event.preventDefault();
+    $('input:checkbox[name=friend]:checked').each(function() {
+        console.log('Checkbox: ' + $(this).val());
+    });
   }
 
+
+
+});
+
+Template.sendForm.helpers({
+  showFriends: function(){
+    return Friends.find({}, {userId: Meteor.user()._id});
+  }
 });

@@ -1,0 +1,7 @@
+{
+  "TWILIO": {
+    "FROM": process.env.PHONENUMBER
+    "SID": process.env.TWILIOSID
+    "TOKEN": process.env.AUTHTOKEN
+  }
+}
