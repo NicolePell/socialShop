@@ -22,8 +22,11 @@ Template.poll.events({
       { $inc: action }
     );
 
+    console.log(pollID);
+    console.log(Polls.findOne({ _id: pollID }));
+
     image: {
-      return Polls.find({ _id: pollID }).image;
+      return Polls.findOne({ _id: pollID }).image;
     }
 
   }

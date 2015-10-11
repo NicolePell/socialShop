@@ -19,7 +19,7 @@ Template.sendForm.events({
     event.preventDefault();
     $('input:checkbox[name=friend]:checked').each(function() {
         var userId = Meteor.user()._id;
-        var pollId = Polls.findOne({ userId: userId})._id;
+        var pollId = Polls.findOne({ userId: userId}, {sort: {createdAt: -1}})._id;
         Router.go("/poll/" + pollId);
     });
   }

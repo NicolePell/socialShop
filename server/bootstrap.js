@@ -6,6 +6,7 @@ Meteor.startup(function() {
     // create sample polls
     var samplePolls = [
       {
+        createdAt: new Date(),
         choices: [
           { text: 'Of course!', votes: 0 },
           { text: 'Eh', votes: 0 },
@@ -38,6 +39,7 @@ Meteor.methods({
     var newPoll = {
       image: photo,
       userId: user,
+      createdAt: new Date(),
       choices: [
         {  text: "Hells yeah.", votes: 0 },
         {  text: "Fugly.", votes: 0 },
@@ -47,7 +49,5 @@ Meteor.methods({
 
     // create the new poll
     Polls.insert(newPoll);
-    console.log(newPoll);
-    console.log(user);
   }
 });
