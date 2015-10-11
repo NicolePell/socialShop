@@ -1,0 +1,27 @@
+<template name="addFriend">
+  <div class="col-xs-12 col-sm-4">
+    <h2>Add a Account</h2>
+      <form class="addFriend">
+          <p>Name: <input type="text" name="friend"></p>
+          <p>Telephone: <input type="telephone" name="telephone"></p>
+          <ul class="row">
+            <li class="col-xs-4">
+              <input type="submit" value="Submit">
+            </li>
+            <li class="col-xs-4">
+              <button class="cancelEdit">Cancel</button>
+            </li>
+            <li class="col-xs-4">
+              <button class="createPoll">Poll</button>
+            </li>
+          </ul>
+
+      </form>
+
+  </div>
+      <section class="col-xs-12 col-sm-8">
+      {{#each showFriends}}
+        {{> friendTemp}}
+      {{/each}}
+    </section>
+</template>

@@ -21,6 +21,34 @@ Meteor.startup(function() {
     });
 
   }
-        
 
+
+});
+
+// Meteor.users.allow({
+//     'insert': function (userId,doc,fields, modifier) {
+//       /* user and doc checks ,
+//       return true to allow insert */
+//       return true;
+//     }
+//   });
+
+Meteor.methods({
+  createFriend: function (friend) {
+    console.log('friend created');
+    Friends.insert(friend);
+  }
+});
+
+// Meteor.methods({
+//   getFriends: function (userId) {
+//     console.log('user updated on server');
+//     return Friends.find({}, {userId: userId});
+//   }
+// });
+
+Meteor.methods({
+    'sendLogMessage': function(current){
+        console.log('Hello world', current);
+    }
 });

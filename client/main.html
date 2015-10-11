@@ -7,14 +7,16 @@
             Social Shop
           </a>
           {{#if currentUser}}
-            <p>Hello {{username}} </p>
+            <p>Hello {{currentUser.username}} </p>
             <p><a href="#" class="logout">Logout</a></p>
+            <p><a class="addFriend" href="{{pathFor route='addFriend'}}">Add friend</a></p>
           {{/if}}
         </div>
       </div>
     </nav>
 
-    {{> yield}}
-
+    <div class="container">
+      {{> yield}}
+    </div>
   </body>
 </template>
