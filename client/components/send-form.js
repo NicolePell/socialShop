@@ -10,7 +10,7 @@ Template.sendForm.events({
          if (!error) {
              template.$('.photo').attr('src', data);
              Session.set('photo', data);
-             Meteor.call('newPoll', data, Meteor.userId());
+             Meteor.call('newPoll', data, (Meteor.user()._id));
          }
       });
   },
@@ -18,8 +18,9 @@ Template.sendForm.events({
   'click .sendToUser': function(event){
     event.preventDefault();
     $('input:checkbox[name=friend]:checked').each(function() {
-        console.log('Checkbox: ' + $(this).val());
-        Router.go("/poll/");
+        var userId = Meteor.user()._id;
+        var pollId = Polls.findOne({ userId: userId})._id;
+        Router.go("/poll/" + pollId);
     });
   }
 });
