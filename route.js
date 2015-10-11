@@ -11,21 +11,26 @@ Router.configure({
 });
 
 Router.route('/', {
+    name: 'home',
     template: 'home'
 });
 
 Router.route('/signup', {
+    name: 'signup',
     template: 'signup'
 });
 
 Router.route('/signin', {
+    name: 'signin',
     template: 'signin'
 });
 
 Router.route('/addFriend', {
+    name: 'addFriend',
     template: 'addFriend'
 });
 
 Router.route('/create', {
+    name: 'create',
     template: 'sendForm'
 });
